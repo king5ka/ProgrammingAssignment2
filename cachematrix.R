@@ -3,20 +3,20 @@
 
 ## this function is going to make a matrix that lets us cache the inverse easier
 
-makeCacheMatrix <- function(x = matrix()) {
-    i <- NULL
-  set <- function(y) {
-          x <<- y
-          i <<- NULL
-  }
-  get <- function() x
-  setinverse <- function(inverse) i <<- inverse
-  getinverse <- function() i
-  list(set = set,
-       get = get,
-       setinverse = setinverse,
-       getinverse = getinverse)
-}
+makeCacheMatrix<- function(x = matrix()) {
+    i<- NULL
+    set<- function(y) {
+        x <<-y
+        i<<-NULL
+        }
+    get<- function() x
+    setinverse <- function(inverse) i<<- inverse
+    getinverse <- function() i
+    list(set=set,
+         get=get,
+         setinverse=setinverse,
+         getinverse=getinverse)
+    }
 ## I am  using <<- because I don't necessarily have those values in our environment yet, and so that R knows it's not in m current environment
 
 
